@@ -4,18 +4,18 @@
 
 let mainConfig = {
   vssueConfig: {
-    owner: "mc-dusk",
+    owner: "MC-dusk",
     repo: "Issue-Blog",
     clientId: "Ov23liXxJt9R7qNYIywE",
     clientSecret: "ebaf8f4c1ee9ca498206c8114642704114c7f4c0"
   },
 
   repoConfig: {
-    owner: "mc-dusk",
+    owner: "MC-dusk",
     repo: "Issue-Blog",
     pushBranch: "pages",
     email: "52311860+MC-dusk@users.noreply.github.com",
-    filterUsers: ['mc-dusk']
+    filterUsers: ['MC-dusk']
   },
 
   title: "Dusk's Blog",
