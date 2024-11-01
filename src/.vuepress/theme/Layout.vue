@@ -62,7 +62,7 @@ export default {
       name: '总览',
       count,
       desc: `共发布了 ${count} 篇文章。`,
-      link: `/`
+      link: this.$site.base
     }].concat(this.$frontmatter.categories)
   }
 }
