@@ -20,7 +20,7 @@ let mainConfig = {
 
   title: "Dusk's Blog",
   description: "You are not alone.",
-  customDomain: "gh.dusk.chat",
+  customDomain: "",
   base: "/Issue-Blog/",
 
   slogan: {
@@ -36,18 +36,18 @@ let mainConfig = {
       },
       {
         name: "Source",
-        link: "https://github.com/mc-dusk/Issue-Blog"
+        link: "https://github.com/MC-dusk/Issue-Blog"
       },
       {
         name: "Post",
-        link: "https://github.com/mc-dusk/Issue-Blog/issues"
+        link: "https://github.com/MC-dusk/Issue-Blog/issues"
       },
       {
         name: "CV",
         link: "/Issue-Blog/cv.html"
       }
     ],
-    headTitle: ["暮春早夏的月亮", "原是情人的月亮，不比秋冬是诗人的月亮"],
+    headTitle: ["空乏其身行", "拂乱其所为","所以动心忍性，曾益其所不能"],
     friendLinks: [
       {
         name: "estertion",
@@ -56,6 +56,10 @@ let mainConfig = {
       {
         name: "subbers",
         link: "https://subbers.org/subtitles/"
+      }
+      {
+        name: "liujiacai",
+        link: "https://liujiacai.net/"
       }
     ],
     extraFooters: [
