@@ -20,7 +20,7 @@ let mainConfig = {
 
   title: "Dusk's Blog",
   description: "You are not alone.",
-  customDomain: "",
+  customDomain: "gh.dusk.chat",
   base: "/Issue-Blog/",
 
   slogan: {
