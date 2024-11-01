@@ -56,7 +56,7 @@ let mainConfig = {
       {
         name: "subbers",
         link: "https://subbers.org/subtitles/"
-      }
+      },
       {
         name: "liujiacai",
         link: "https://liujiacai.net/"
