@@ -3,7 +3,7 @@ name: gen
 on:
   push:
     branches:
-      - main
+      - main # 更新触发Actions的分支
   issues:
     types:
       [
@@ -21,7 +21,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    permissions: write-all
+    permissions: write-all # 必须，否则不能更新编译结果
 
     strategy:
       matrix:
