@@ -41,7 +41,7 @@ module.exports = {
     [
       "@vssue/vuepress-plugin-vssue",
       {
-        platform: "github",
+        platform: "github-v3",
         ...customConfig.vssueConfig
       }
     ]
