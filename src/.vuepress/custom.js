@@ -31,20 +31,20 @@ let mainConfig = {
   themeConfig: {
     nav: [
       {
-        name: "首页",
+        name: "Blog",
         link: "/Issue-Blog"
       },
       {
-        name: "Source",
-        link: "https://github.com/MC-dusk/Issue-Blog"
-      },
-      {
-        name: "Post",
-        link: "https://github.com/MC-dusk/Issue-Blog/issues"
+        name: "Dusk",
+        link: "https://dusk.chat/"
       },
       {
         name: "CV",
         link: "/Issue-Blog/cv.html"
+      },
+      {
+        name: "Source",
+        link: "https://github.com/MC-dusk/Issue-Blog"
       }
     ],
     headTitle: ["空乏其身行", "拂乱其所为","所以动心忍性，曾益其所不能"],
