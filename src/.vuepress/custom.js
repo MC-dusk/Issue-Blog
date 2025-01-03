@@ -31,7 +31,7 @@ let mainConfig = {
   themeConfig: {
     nav: [
       {
-        name: "Blog",
+        name: "首页",
         link: "/Issue-Blog"
       },
       {
@@ -41,6 +41,10 @@ let mainConfig = {
       {
         name: "CV",
         link: "/Issue-Blog/cv.html"
+      },
+      {
+        name: "Docs",
+        link: "https://gh.dusk.chat/docsify/"
       },
       {
         name: "Source",
