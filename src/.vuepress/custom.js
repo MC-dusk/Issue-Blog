@@ -35,16 +35,12 @@ let mainConfig = {
         link: "/Issue-Blog"
       },
       {
-        name: "Dusk",
-        link: "https://dusk.chat/"
-      },
-      {
         name: "CV",
         link: "/Issue-Blog/cv.html"
       },
       {
         name: "Docs",
-        link: "https://gh.dusk.chat/docsify/"
+        link: "https://mc-dusk.github.io/docsify/"
       },
       {
         name: "Source",
