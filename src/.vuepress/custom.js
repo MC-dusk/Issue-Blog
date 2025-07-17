@@ -35,6 +35,10 @@ let mainConfig = {
         link: "/Issue-Blog"
       },
       {
+        name: "主页",
+        link: "/"
+      },
+      {
         name: "CV",
         link: "/Issue-Blog/cv.html"
       },
