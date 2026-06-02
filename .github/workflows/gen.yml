@@ -20,18 +20,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # env:
+      # FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     permissions: write-all # 必须，否则不能更新编译结果
 
-    strategy:
-      matrix:
-        node-version: [19.x]
+    # strategy:
+      # matrix:
+        # node-version: [24.x]
 
     steps:
-      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24.x
+      - uses: pnpm/action-setup@v6
         with:
           version: latest
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - name: Download Issue and Publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
