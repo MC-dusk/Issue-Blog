@@ -3,3 +3,12 @@ onlyBuiltDependencies:
   - esbuild
   - highlight.js
   - vuepress
+
+allowBuilds:
+  core-js: true
+  esbuild: true
+  highlight.js: true
+  vuepress: true
+
+neverBuiltDependencies: []
+dangerouslyAllowAllBuilds: true
