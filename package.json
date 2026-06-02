@@ -24,5 +24,13 @@
     "push": "cross-env NODE_ENV=local node ./tools/deploy.js",
     "deploy": "cross-env NODE_ENV=action node ./tools/deploy.js",
     "test-env": "cross-env custom={\\\"base\\\":\\\"/\\\"} vuepress dev ./src "
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "core-js",
+      "esbuild",
+      "highlight.js",
+      "vuepress"
+    ]
   }
 }
