@@ -55,6 +55,30 @@ async function main() {
       console.log(`[cp] ${gitFile}`)
     })
 
+    // preserve generated markdown source files in the deployed branch
+    const srcPath = path.resolve(rootPath, 'src')
+    const deploySrcPath = path.resolve(repoPath, 'src')
+    shell.mkdir('-p', deploySrcPath)
+
+    const generatedSources = ['posts', 'categories']
+    generatedSources.forEach((dirName) => {
+      const sourceDir = path.resolve(srcPath, dirName)
+      const targetDir = path.resolve(deploySrcPath, dirName)
+      if (fs.existsSync(sourceDir)) {
+        if (fs.existsSync(targetDir)) {
+          shell.rm('-rf', targetDir)
+        }
+        shell.cp('-r', sourceDir, deploySrcPath)
+        console.log(`[cp] ${targetDir}`)
+      }
+    })
+
+    const sourceReadme = path.resolve(srcPath, 'README.md')
+    if (fs.existsSync(sourceReadme)) {
+      shell.cp(sourceReadme, deploySrcPath)
+      console.log(`[cp] ${deploySrcPath}/README.md`)
+    }
+
     console.log('[git] deploying...')
     Git(repoPath).addConfig('user.name', owner)
       .addConfig('user.email', email)
