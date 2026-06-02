@@ -41,6 +41,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          pnpm approve-builds core-js esbuild highlight.js vuepress
           pnpm i
           pnpm action
           pnpm build
