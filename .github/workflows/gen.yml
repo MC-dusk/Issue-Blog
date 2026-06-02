@@ -40,8 +40,8 @@ jobs:
       - name: Download Issue and Publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PNPM_ALLOW_ALL_BUILDS: true
         run: |
-          pnpm approve-builds --all
           pnpm i
           pnpm action
           pnpm build
