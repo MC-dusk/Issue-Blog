@@ -48,3 +48,27 @@ link: this.$site.base
 
 其他还有一些小坑，比如按教程配置`custom.js`，用户名和库名要区分大小写，如果主库（`<your-github-name>.github.io`）配置了自定义域名，`customDomain: ""`可以不填
 
+## 6
+
+> 260604更新
+
+[Github](https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/)在2026年6月左右，强制升级action环境的node，从20到24，这导致之前的自动化工作流失效。
+
+进行了以下调整：
+
+1. 将`.github\workflows\gen.yml`的`actions/checkout`和`pnpm/action-setup`升级到v6，`pnpm/action-setup`指定使用pnpm最新版（目前是11）。
+
+2. 使用`actions/setup-node@v6`指定node24，`FORCE_JAVASCRIPT_ACTIONS_TO_NODE24`是github过渡期设置方法，`strategy-matrix-node-version`是早期的设置方法，已注释。
+
+3. pnpm v9+默认禁止依赖包自动执行安装脚本，导致`core-js`、`esbuild`、`highlight.js`和`vuepress`安装失败，尝试修改`.github\workflows\gen.yml`的pnpm命令来解决，无效。
+   尝试增加了下面文件：
+   
+   - pnpm-workspace.yaml
+   - .npmrc
+   
+   两个文件和里面的内容可能只有部分是有用的，由于不知道哪个部分实际起作用，干脆全上了。
+
+## 7
+
+修改了`tools\deploy.js`以保留issue转html的md中间文件。
+
